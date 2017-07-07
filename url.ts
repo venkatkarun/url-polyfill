@@ -123,6 +123,14 @@ export class URLSearchParams {
     this.forEach(function(value, name) { items.push([value, name]); });
     return createIterator(items);
   }
+
+  toString() {
+    const pairs = [];
+    this.forEach(function (value, name) {
+      pairs.push(encodeURIComponent(name) + '=' + encodeURIComponent(value));
+    });
+    return pairs.join('&');
+  }
 }
 
 

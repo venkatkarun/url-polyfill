@@ -241,7 +241,7 @@ var URL = (function () {
             value = value.toString();
             if ((value.length === 0) || (value.charAt(0) !== '/'))
                 value = '/' + value;
-            this._parts.path = encodeURIComponent(value);
+            this._parts.path = value;
         },
         enumerable: true,
         configurable: true
